@@ -16,8 +16,8 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "MSDS AMCH — Major SD Singh PG Ayurvedic Medical College | Admissions 2025-26" },
-      { name: "description", content: "Apply for BAMS and MS (Prasuti Tantra, Shalya Tantra) at MSDS AMCH. CCIM approved, 40+ years legacy, 200-bed teaching hospital. Admissions open." },
+      { title: "MSDSPG- Major SD Singh PG Ayurvedic Medical College | Admissions 2026-27" },
+      { name: "description", content: "Apply for BAMS and MS (Prasuti Tantra, Shalya Tantra) at MSDSPG. CCIM approved, 40+ years legacy, 200-bed teaching hospital. Admissions open." },
     ],
   }),
 });

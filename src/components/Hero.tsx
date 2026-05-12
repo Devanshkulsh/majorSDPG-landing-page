@@ -1,154 +1,129 @@
 import { motion } from "framer-motion";
-import { STATS } from "@/constants/data";
-import CountUp from "./CountUp";
 
-const HEADLINE = ["Heal", "with", "Ancient", "Wisdom."];
-const HEADLINE2 = ["Lead", "with", "Modern", "Excellence."];
+const APPLICATION_FORM_DIV_ID = "formsID7375";
+
+const container = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.1 } },
+};
+
+const item = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+};
 
 export default function Hero() {
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "data:application/pdf;base64,JVBERi0xLjQK";
+    link.download = "MSDS_BAMS_Brochure.pdf";
+    link.click();
+  };
+
+  const scrollToLeadForm = () => {
+    const form = document.getElementById(APPLICATION_FORM_DIV_ID);
+    if (!form) return;
+    form.scrollIntoView({ behavior: "smooth", block: "center" });
+  };
+
   return (
-    <section
-      id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-charcoal-deep pt-28 pb-20 sm:pt-24 sm:pb-16"
-    >
-      <div
-        className="absolute inset-0"
-        style={{
-          background: "radial-gradient(ellipse at center, #1A1A2E 0%, #0D0D1A 50%, #1A0A0A 100%)",
-        }}
-      />
-      {/* Floating ornaments */}
-      <motion.svg
-        className="absolute top-10 left-[-10%] sm:top-20 sm:left-10 w-48 h-48 sm:w-72 sm:h-72 opacity-[0.08]"
-        viewBox="0 0 200 200"
-        animate={{ rotate: 360 }}
-        transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
-      >
-        <circle cx="100" cy="100" r="90" stroke="#F5B800" strokeWidth="1" fill="none" />
-        <circle cx="100" cy="100" r="70" stroke="#F5B800" strokeWidth="1" fill="none" />
-        <circle cx="100" cy="100" r="50" stroke="#F5B800" strokeWidth="1" fill="none" />
-      </motion.svg>
-      <motion.svg
-        className="absolute bottom-10 right-[-10%] sm:bottom-32 sm:right-10 w-64 h-64 sm:w-96 sm:h-96 opacity-[0.07]"
-        viewBox="0 0 200 200"
-        animate={{ rotate: -360 }}
-        transition={{ duration: 80, repeat: Infinity, ease: "linear" }}
-      >
-        <circle cx="100" cy="100" r="95" stroke="#29B6D8" strokeWidth="1" fill="none" />
-        <circle cx="100" cy="100" r="60" stroke="#29B6D8" strokeWidth="1" fill="none" />
-      </motion.svg>
-      <motion.svg
-        className="absolute top-1/3 right-1/4 w-40 h-40 opacity-[0.06] hidden sm:block"
-        viewBox="0 0 100 100"
-        animate={{ scale: [1, 1.2, 1] }}
-        transition={{ duration: 8, repeat: Infinity }}
-      >
-        <circle cx="50" cy="50" r="40" stroke="#F5B800" strokeWidth="0.5" fill="none" />
-      </motion.svg>
+    <section id="home" className="relative min-h-screen w-full overflow-x-hidden bg-charcoal-deep">
+      <div className="absolute inset-0 z-0">
+        <img 
+          src="/hero.webp" 
+          alt="College Campus" 
+          className="h-full w-full object-cover" 
+        />
+        <div className="absolute inset-0 bg-linear-to-b from-charcoal-deep/95 via-charcoal-deep/80 to-charcoal-deep/90 sm:bg-linear-to-r" />
+      </div>
 
-      <div className="relative max-w-6xl mx-auto px-4 sm:px-6 text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-sky/40 bg-sky/10 mb-6 sm:mb-8"
-        >
-          <span className="w-2 h-2 rounded-full bg-sky animate-pulse-dot" />
-          <span className="text-sky text-[10px] sm:text-xs font-medium uppercase tracking-widest">
-            🌿 Admissions Open 2026–27
-          </span>
-        </motion.div>
-
-        <h1 className="font-bold text-cream leading-[1.2] sm:leading-[1.1] tracking-tight">
-          <div className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl xl:text-7xl mb-2 flex flex-wrap justify-center gap-x-2 sm:gap-x-3">
-            {HEADLINE.map((w, i) => (
-              <motion.span
-                key={i}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2 + i * 0.08 }}
-              >
-                {w}
-              </motion.span>
-            ))}
-          </div>
-          <div className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl xl:text-7xl mb-4 flex flex-wrap justify-center gap-x-2 sm:gap-x-3">
-            {HEADLINE2.map((w, i) => (
-              <motion.span
-                key={i}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.5 + i * 0.08 }}
-              >
-                {w}
-              </motion.span>
-            ))}
-          </div>
+      <div className="relative z-10 mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8 lg:py-32 xl:py-40">
+        <div className="flex flex-col items-center gap-12 lg:flex-row lg:items-center lg:gap-12 xl:gap-20">
+          
+          {/* Text Content */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.0 }}
-            className="text-2xl xs:text-3xl sm:text-5xl md:text-6xl xl:text-7xl"
+            className="flex w-full flex-1 flex-col items-center text-center lg:items-start lg:text-left"
+            variants={container}
+            initial="hidden"
+            animate="visible"
           >
-            <span>Begin at </span>
-            <span
-              className="bg-clip-text text-transparent animate-shimmer"
-              style={{
-                backgroundImage: "linear-gradient(90deg,#F5B800,#FFFDF4,#F5B800)",
-                backgroundSize: "200% 100%",
-              }}
+            <motion.div
+              variants={item}
+              className="mb-6 inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/10 px-4 py-2 text-[10px] font-bold uppercase tracking-widest text-gold backdrop-blur-md sm:text-xs"
             >
-              MSDS AMCH.
-            </span>
+              <span className="relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-gold opacity-75"></span>
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-gold"></span>
+              </span>
+              Admissions Open | Session 2026-2027
+            </motion.div>
+
+            <motion.h1
+              variants={item}
+              className="mb-4 text-3xl font-extrabold leading-[1.15] text-cream sm:text-5xl lg:text-6xl xl:text-7xl"
+            >
+              <span className="text-gold">Major S. D. Singh</span> <br className="hidden sm:block" />
+              Ayurvedic Medical College
+            </motion.h1>
+
+            <motion.h2
+              variants={item}
+              className="mb-6 max-w-xl text-lg font-medium text-cream/90 sm:text-2xl"
+            >
+              Classical Ayurveda, clinical confidence, and research-minded care.
+            </motion.h2>
+
+            <motion.p
+              variants={item}
+              className="mb-8 max-w-2xl text-sm leading-relaxed text-cream/70 sm:text-base md:text-lg"
+            >
+              Join Major SD Singh PG Ayurvedic Medical College & Hospital for a focused B.A.M.S. 
+              journey built on strong classroom learning, extensive hospital exposure, and a 
+              disciplined approach to professional practice.
+            </motion.p>
+
+            <motion.div
+              variants={item}
+              className="flex w-full flex-col gap-4 sm:w-auto sm:flex-row lg:justify-start"
+            >
+              <button
+                onClick={scrollToLeadForm}
+                className="group relative flex items-center justify-center overflow-hidden rounded-full bg-gold px-10 py-4 text-base font-bold text-charcoal shadow-xl shadow-gold/20 transition-all hover:bg-gold-dark active:scale-95"
+              >
+                Apply Now
+              </button>
+              <button
+                onClick={handleDownload}
+                className="flex items-center justify-center rounded-full border-2 border-cream/20 bg-white/5 px-10 py-4 text-base font-bold text-cream backdrop-blur-sm transition-all hover:border-gold hover:text-gold active:scale-95"
+              >
+                Campus Tour
+              </button>
+            </motion.div>
           </motion.div>
-        </h1>
 
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.3 }}
-          className="mt-6 sm:mt-8 max-w-3xl mx-auto text-cream/70 text-sm sm:text-lg leading-relaxed px-4 sm:px-0"
-        >
-          Major SD Singh PG Ayurvedic Medical College & Hospital — Shaping the next generation of
-          Ayurvedic healers and surgeons.
-        </motion.p>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.5 }}
-          className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 max-w-4xl mx-auto"
-        >
-          {STATS.map((s) => (
-            <div key={s.label} className="text-center p-2">
-              <div className="text-2xl sm:text-3xl mb-1 sm:mb-2">{s.icon}</div>
-              <div className="text-xl sm:text-2xl md:text-3xl font-bold text-gold">
-                <CountUp end={s.value} suffix={s.suffix} />
+          {/* Form Container */}
+          <motion.div
+            className="relative z-20 w-full max-w-lg lg:w-112.5 xl:w-125"
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-white/95 p-1 shadow-2xl backdrop-blur-xl sm:rounded-3xl">
+              <div className="flex items-center justify-between border-b border-gray-100 px-6 py-4">
+                <h3 className="font-bold text-charcoal">Registration Form</h3>
               </div>
-              <div className="text-cream/60 text-[10px] sm:text-xs mt-1 uppercase tracking-wider">{s.label}</div>
+              <div
+                id={APPLICATION_FORM_DIV_ID}
+                className="h-125 w-full overflow-y-auto bg-white sm:h-137.5"
+              />
             </div>
-          ))}
-        </motion.div>
+            
+            {/* Decorative element */}
+            <div className="absolute -bottom-6 -right-6 -z-10 h-32 w-32 rounded-full bg-gold/20 blur-3xl" />
+            <div className="absolute -top-6 -left-6 -z-10 h-32 w-32 rounded-full bg-sky/20 blur-3xl" />
+          </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.7 }}
-          className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-stretch sm:items-center px-4"
-        >
-          <a
-            href="#lead"
-            className="bg-gold text-charcoal font-semibold px-8 py-4 rounded-lg hover:bg-gold-dark transition-all hover:-translate-y-1 hover:shadow-2xl hover:shadow-gold/30 text-sm sm:text-base text-center"
-          >
-            Apply for Admission →
-          </a>
-          <a
-            href="#admissions"
-            className="border-2 border-gold text-gold font-semibold px-8 py-4 rounded-lg hover:bg-gold hover:text-charcoal transition-all text-sm sm:text-base text-center"
-          >
-            Download Prospectus
-          </a>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

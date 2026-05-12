@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { NAV_LINKS } from "@/constants/data";
-import logo from "@/assets/msds-logo.webp";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -26,7 +25,7 @@ export default function Navbar() {
         {/* Logo and Title Alignment */}
         <a href="#home" className="flex items-center gap-2 sm:gap-3 group flex-shrink-1">
           <img 
-            src={logo} 
+            src="/logo.webp"
             alt="MSDS AMCH logo" 
             className="h-10 w-10 sm:h-12 sm:w-12 rounded-full object-contain flex-shrink-0" 
           />

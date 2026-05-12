@@ -102,6 +102,26 @@ function RootShell({ children }: { children: React.ReactNode }) {
       </head>
       <body>
         {children}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function () {
+                if (document.getElementById("ntechzy-student-form-script")) return;
+                var s = document.createElement("script");
+                s.id = "ntechzy-student-form-script";
+                s.type = "module";
+                s.src = "https://ntechzy.in/api/v1/student-form/form.js";
+                s.setAttribute("path", '["/", "/dynamicForm/index.html","/admissions"]');
+                s.setAttribute("divid", "formsID7375");
+                s.setAttribute("courses", '["Select Course","BAMS"]');
+                s.setAttribute("styles", "classic");
+                s.setAttribute("logo", "/logo.webp");
+                s.setAttribute("contact", "7300864280");
+                document.body.appendChild(s);
+              })();
+            `,
+          }}
+        />
         <Scripts />
       </body>
     </html>

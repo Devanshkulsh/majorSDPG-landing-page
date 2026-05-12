@@ -8,7 +8,9 @@ import tsconfigPaths from "vite-tsconfig-paths";
 
 // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
 // @cloudflare/vite-plugin builds from this — wrangler.jsonc main alone is insufficient.
-export default defineConfig(({ command }) => {
+export default defineConfig(async ({ command }) => {
+  const isVercel = process.env.VERCEL === "1";
+
   const plugins: PluginOption[] = [
     tanstackStart({
       customViteReactPlugin: true,
@@ -19,7 +21,12 @@ export default defineConfig(({ command }) => {
     tsconfigPaths(),
   ];
 
-  if (command === "build") {
+  if (isVercel) {
+    const { nitro } = await import("nitro/vite");
+    plugins.splice(1, 0, nitro());
+  }
+
+  if (command === "build" && !isVercel) {
     plugins.push(cloudflare());
   }
 

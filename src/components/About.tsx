@@ -5,7 +5,7 @@ import { FaHospital, FaBookOpen, FaLeaf, FaUserDoctor } from "react-icons/fa6";
 import SectionLabel from "./SectionLabel";
 
 const POINTS = [
-  { icon: FiCheckCircle, title: "CCIM & State Govt. Recognized" },
+  { icon: FiCheckCircle, title: "NCISM & State Govt. Recognized" },
   { icon: FaUserDoctor, title: "Experienced Vaidyas & Professors" },
   { icon: FaHospital, title: "Full Teaching Hospital Attached" },
   { icon: FaLeaf, title: "Holistic Residential Campus" },

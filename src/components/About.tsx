@@ -70,17 +70,18 @@ export default function About() {
                   <img
                     src="/thumnail.webp"
                     alt="Campus tour video thumbnail"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover grayscale group-hover/thumb:grayscale-0 transition-all duration-300"
                     loading="lazy"
                   />
                   <div className="absolute inset-0 bg-black/25 group-hover/thumb:bg-black/35 transition-colors duration-200" />
                   <span className="absolute inset-0 flex items-center justify-center">
-                    <span className="w-16 h-16 rounded-full bg-white/90 group-hover/thumb:bg-white text-charcoal-deep flex items-center justify-center shadow-lg transition-all duration-200">
+                    <span className="relative w-20 h-20 rounded-full border-2 border-gold/90 bg-black/25 text-white flex items-center justify-center shadow-[0_0_0_4px_rgba(184,134,11,0.28),0_0_20px_rgba(184,134,11,0.85),0_0_40px_rgba(184,134,11,0.65)] animate-pulse group-hover/thumb:scale-105 group-hover/thumb:shadow-[0_0_0_6px_rgba(184,134,11,0.4),0_0_26px_rgba(184,134,11,0.95),0_0_52px_rgba(184,134,11,0.8)] transition-all duration-300">
+                      <span className="absolute inset-0 rounded-full border border-gold/70 animate-ping opacity-40" />
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24"
                         fill="currentColor"
-                        className="w-7 h-7 ml-1"
+                        className="w-7 h-7 ml-1 drop-shadow-[0_2px_6px_rgba(0,0,0,0.45)]"
                       >
                         <path d="M8 5v14l11-7z" />
                       </svg>

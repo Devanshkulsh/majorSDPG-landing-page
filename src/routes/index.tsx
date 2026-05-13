@@ -9,7 +9,7 @@ import AdmissionsProcess from "@/components/AdmissionsProcess";
 import LeadForm from "@/components/LeadForm";
 import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
-// import Contact from "@/components/Contact";
+import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
 export const Route = createFileRoute("/")({
@@ -39,7 +39,7 @@ function Index() {
       <LeadForm />
       <Testimonials />
       <FAQ />
-      {/* <Contact /> */}
+      <Contact />
       <Footer />
     </main>
   );

@@ -7,6 +7,8 @@ import {
   FaPeopleGroup,
   FaSchool,
   FaUserDoctor,
+  FaBed,
+  FaUtensils
 } from "react-icons/fa6";
 
 export const NAV_LINKS = [
@@ -92,16 +94,71 @@ export const COURSES = [
   },
 ];
 
+
 export const FACILITIES = [
-  { icon: FaHospital, title: "Teaching Hospital", desc: "200+ bed hospital with OPD, IPD, OT, and specialty clinics for real clinical exposure" },
-  { icon: FaBookOpen, title: "Central Library", desc: "10,000+ volumes of Ayurvedic classics, journals, and digital databases" },
-  { icon: FaFlask, title: "Modern Laboratories", desc: "Dravyaguna herb gardens, pharmacognosy lab, anatomy dissection hall" },
-  { icon: FaLeaf, title: "Herbal Garden", desc: "On-campus medicinal plant garden with 300+ species for hands-on learning" },
-  { icon: FaSchool, title: "Hostel Facility", desc: "Separate hostels for boys and girls with secure, comfortable on-campus living" },
-  { icon: FaDumbbell, title: "Gym", desc: "Well-equipped fitness center to support student health and daily training" },
-  { icon: FaPeopleGroup, title: "Sports & Clubs", desc: "Active sports programs and student clubs for teamwork, leadership, and recreation" },
-  { icon: FaSchool, title: "Residential Campus", desc: "Separate hostels for boys and girls, mess facility, sports grounds" },
-  { icon: FaUserDoctor, title: "Skilled Faculty", desc: "50+ qualified Vaidyas and professors with decades of clinical and academic experience" },
+  {
+    icon: FaHospital,
+    title: "Teaching Hospital",
+    desc: "200+ bed hospital with OPD, IPD, OT, and specialty clinics for hands-on clinical exposure from day one.",
+    image: "/public/facilities/teaching.webp",
+    tag: "Clinical",
+  },
+  {
+    icon: FaBookOpen,
+    title: "Central Library",
+    desc: "10,000+ volumes of Ayurvedic classics, modern medical journals, and curated digital databases.",
+    image: "/public/facilities/library.webp",
+    tag: "Academic",
+  },
+  {
+    icon: FaFlask,
+    title: "Modern Laboratories",
+    desc: "Fully equipped pharmacognosy, biochemistry, and anatomy dissection labs for immersive practical learning.",
+    image: "/public/facilities/lab.webp",
+    tag: "Research",
+  },
+  {
+    icon: FaLeaf,
+    title: "Herbal Garden",
+    desc: "On-campus medicinal plant garden with 300+ species — a living classroom for Dravyaguna and pharmacognosy.",
+    image: "/public/facilities/herbalgarden.webp",
+    tag: "Nature",
+  },
+  {
+    icon: FaBed,
+    title: "Hostel Facility",
+    desc: "Secure, comfortable on-campus hostels for boys and girls with 24/7 wardens and all essential amenities.",
+    image: "/public/facilities/hostel.webp",
+    tag: "Living",
+  },
+  {
+    icon: FaDumbbell,
+    title: "Gymnasium",
+    desc: "A well-equipped fitness center designed to support student wellness, strength, and daily physical training.",
+    image: "/public/facilities/gym.webp",
+    tag: "Wellness",
+  },
+  {
+    icon: FaPeopleGroup,
+    title: "Sports & Clubs",
+    desc: "Active sports programs, cultural clubs, and student bodies that foster teamwork, creativity, and leadership.",
+    image: "/public/facilities/sports.webp",
+    tag: "Community",
+  },
+  {
+    icon: FaUtensils,
+    title: "Mess & Dining",
+    desc: "Nutritious, hygienic meals served in a spacious dining hall — fuel for rigorous academic and clinical days.",
+    image: "/public/facilities/mess.webp",
+    tag: "Living",
+  },
+  {
+    icon: FaUserDoctor,
+    title: "Expert Faculty",
+    desc: "50+ qualified Vaidyas and professors with decades of combined clinical practice and academic excellence.",
+    image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=600&auto=format&fit=crop&q=70",
+    tag: "Academic",
+  },
 ];
 
 export const STEPS = [

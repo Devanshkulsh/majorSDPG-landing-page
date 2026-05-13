@@ -15,11 +15,11 @@ export default function About() {
     <section id="about" className="relative bg-cream py-16 md:py-24 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         {/* Visual/Stats Column */}
-        <motion.div 
-          initial={{ opacity: 0, x: -40 }} 
-          whileInView={{ opacity: 1, x: 0 }} 
-          viewport={{ once: true }} 
-          transition={{ duration: 0.7 }} 
+        <motion.div
+          initial={{ opacity: 0, x: -40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
           className="relative h-80 sm:h-100 md:h-115 flex items-center justify-center order-2 lg:order-1"
         >
           {/* Mandala SVG - Scaled for mobile */}

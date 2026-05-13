@@ -8,7 +8,7 @@ import {
   FaSchool,
   FaUserDoctor,
   FaBed,
-  FaUtensils
+  FaUtensils,
 } from "react-icons/fa6";
 
 export const NAV_LINKS = [
@@ -94,7 +94,6 @@ export const COURSES = [
   },
 ];
 
-
 export const FACILITIES = [
   {
     icon: FaHospital,
@@ -156,7 +155,8 @@ export const FACILITIES = [
     icon: FaUserDoctor,
     title: "Expert Faculty",
     desc: "50+ qualified Vaidyas and professors with decades of combined clinical practice and academic excellence.",
-    image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=600&auto=format&fit=crop&q=70",
+    image:
+      "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=600&auto=format&fit=crop&q=70",
     tag: "Academic",
   },
 ];

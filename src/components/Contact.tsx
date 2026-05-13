@@ -16,9 +16,7 @@ const CONTACT_ITEMS = [
   {
     icon: FiMail,
     label: "Email",
-    lines: [
-      { text: "majorsdsinghayd@gmail.com", href: "mailto:majorsdsinghayd@gmail.com" },
-    ],
+    lines: [{ text: "majorsdsinghayd@gmail.com", href: "mailto:majorsdsinghayd@gmail.com" }],
   },
   {
     icon: FiMapPin,
@@ -94,7 +92,8 @@ export default function Contact() {
             with Us
           </h2>
           <p className="mt-4 text-charcoal/50 max-w-md mx-auto text-base">
-            We're always happy to answer your questions about admissions, campus life, or anything else.
+            We're always happy to answer your questions about admissions, campus life, or anything
+            else.
           </p>
           <div className="flex items-center justify-center gap-3 mt-6">
             <div className="h-px w-12 bg-gold/40" />
@@ -105,7 +104,6 @@ export default function Contact() {
 
         {/* Main layout: left info panel + right map */}
         <div className="grid lg:grid-cols-5 gap-8 items-stretch">
-
           {/* LEFT: info panel — 2 cols */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -123,7 +121,9 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="text-cream font-bold text-sm">Our Address</p>
-                  <p className="text-cream/40 text-[10px] uppercase tracking-widest">Major S.D. Singh PG AMCH</p>
+                  <p className="text-cream/40 text-[10px] uppercase tracking-widest">
+                    Major S.D. Singh PG AMCH
+                  </p>
                 </div>
               </div>
 
@@ -135,7 +135,9 @@ export default function Contact() {
                       <Icon size={14} className="text-gold-dark" />
                     </div>
                     <div className="min-w-0">
-                      <p className="text-[10px] uppercase tracking-widest text-charcoal/35 font-semibold mb-1">{label}</p>
+                      <p className="text-[10px] uppercase tracking-widest text-charcoal/35 font-semibold mb-1">
+                        {label}
+                      </p>
                       {lines.map((line) => (
                         <a
                           key={line.text}
@@ -146,7 +148,10 @@ export default function Contact() {
                         >
                           <span>{line.text}</span>
                           {line.href.startsWith("http") && (
-                            <FiExternalLink size={10} className="mt-1 shrink-0 opacity-0 group-hover/link:opacity-100 transition-opacity" />
+                            <FiExternalLink
+                              size={10}
+                              className="mt-1 shrink-0 opacity-0 group-hover/link:opacity-100 transition-opacity"
+                            />
                           )}
                         </a>
                       ))}
@@ -171,7 +176,9 @@ export default function Contact() {
 
             {/* Quick links card */}
             <div className="bg-white rounded-2xl border border-gold/20 shadow-[0_8px_40px_rgba(184,134,11,0.08)] px-6 py-5">
-              <p className="text-[10px] uppercase tracking-widest text-gold/70 font-bold mb-4">Quick Links</p>
+              <p className="text-[10px] uppercase tracking-widest text-gold/70 font-bold mb-4">
+                Quick Links
+              </p>
               <ul className="grid grid-cols-2 gap-x-4 gap-y-2">
                 {NAV_LINKS.map((l) => (
                   <li key={l.href}>
@@ -188,7 +195,9 @@ export default function Contact() {
 
               {/* Social icons */}
               <div className="mt-5 pt-5 border-t border-gold/10">
-                <p className="text-[10px] uppercase tracking-widest text-gold/70 font-bold mb-3">Follow Us</p>
+                <p className="text-[10px] uppercase tracking-widest text-gold/70 font-bold mb-3">
+                  Follow Us
+                </p>
                 <div className="flex gap-2">
                   {SOCIAL.map(({ icon: Icon, label, href, bg }) => (
                     <a
@@ -239,7 +248,10 @@ export default function Contact() {
             >
               <FiMapPin size={15} className="text-gold" />
               <span>Get Directions on Google Maps</span>
-              <FiExternalLink size={13} className="text-gold/50 group-hover:text-gold transition-colors" />
+              <FiExternalLink
+                size={13}
+                className="text-gold/50 group-hover:text-gold transition-colors"
+              />
             </a>
           </motion.div>
         </div>

@@ -81,9 +81,7 @@ function FacilityCard({ f, i }: { f: FacilityItem; i: number }) {
             {f.title}
           </h3>
 
-          <p className="text-charcoal/55 text-sm leading-relaxed flex-1">
-            {f.desc}
-          </p>
+          <p className="text-charcoal/55 text-sm leading-relaxed flex-1">{f.desc}</p>
 
           {/* Bottom hover indicator */}
           <motion.div
@@ -149,8 +147,7 @@ export default function Facilities() {
         >
           <SectionLabel>Campus & Infrastructure</SectionLabel>
           <h2 className="mt-4 text-3xl md:text-5xl font-bold text-charcoal leading-tight">
-            World-Class Infrastructure for{" "}
-            <span className="text-gold-dark">Future Healers</span>
+            World-Class Infrastructure for <span className="text-gold-dark">Future Healers</span>
           </h2>
           <p className="mt-4 text-charcoal/50 max-w-xl mx-auto text-base">
             Every corner of our campus is designed to inspire, educate, and heal.

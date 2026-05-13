@@ -53,9 +53,10 @@ export default function FAQ() {
                 <div
                   className={`
                     relative rounded-xl overflow-hidden transition-all duration-300
-                    ${isOpen
-                      ? "bg-linear-to-br from-charcoal/80 to-charcoal/40 shadow-[0_0_0_1px_rgba(212,160,0,0.5),0_8px_32px_rgba(0,0,0,0.3)]"
-                      : "bg-charcoal/30 shadow-[0_0_0_1px_rgba(212,160,0,0.1)] hover:shadow-[0_0_0_1px_rgba(212,160,0,0.25)] hover:bg-charcoal/50"
+                    ${
+                      isOpen
+                        ? "bg-linear-to-br from-charcoal/80 to-charcoal/40 shadow-[0_0_0_1px_rgba(212,160,0,0.5),0_8px_32px_rgba(0,0,0,0.3)]"
+                        : "bg-charcoal/30 shadow-[0_0_0_1px_rgba(212,160,0,0.1)] hover:shadow-[0_0_0_1px_rgba(212,160,0,0.25)] hover:bg-charcoal/50"
                     }
                   `}
                 >
@@ -74,16 +75,22 @@ export default function FAQ() {
                   >
                     {/* Index + Question */}
                     <div className="flex items-start gap-4">
-                      <span className={`text-xs font-black mt-0.75 shrink-0 tabular-nums transition-colors duration-200 ${isOpen ? "text-gold" : "text-gold/30 group-hover:text-gold/60"}`}>
+                      <span
+                        className={`text-xs font-black mt-0.75 shrink-0 tabular-nums transition-colors duration-200 ${isOpen ? "text-gold" : "text-gold/30 group-hover:text-gold/60"}`}
+                      >
                         {String(i + 1).padStart(2, "0")}
                       </span>
-                      <span className={`font-semibold text-base leading-snug transition-colors duration-200 ${isOpen ? "text-cream" : "text-cream/80 group-hover:text-cream"}`}>
+                      <span
+                        className={`font-semibold text-base leading-snug transition-colors duration-200 ${isOpen ? "text-cream" : "text-cream/80 group-hover:text-cream"}`}
+                      >
                         {f.q}
                       </span>
                     </div>
 
                     {/* Toggle icon */}
-                    <div className={`shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${isOpen ? "bg-gold text-charcoal-deep" : "bg-gold/10 text-gold group-hover:bg-gold/20"}`}>
+                    <div
+                      className={`shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${isOpen ? "bg-gold text-charcoal-deep" : "bg-gold/10 text-gold group-hover:bg-gold/20"}`}
+                    >
                       <motion.svg
                         animate={{ rotate: isOpen ? 180 : 0 }}
                         transition={{ duration: 0.3, ease: "easeInOut" }}
@@ -113,9 +120,7 @@ export default function FAQ() {
                       >
                         <div className="px-6 pb-6 pl-14">
                           <div className="h-px bg-gold/15 mb-4" />
-                          <p className="text-cream/65 leading-relaxed text-sm">
-                            {f.a}
-                          </p>
+                          <p className="text-cream/65 leading-relaxed text-sm">{f.a}</p>
                         </div>
                       </motion.div>
                     )}

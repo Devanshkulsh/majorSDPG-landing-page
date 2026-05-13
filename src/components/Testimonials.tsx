@@ -20,7 +20,8 @@ const fadeUp = {
   show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
 };
 
-const getYouTubeThumbnail = (videoId: string) => `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
+const getYouTubeThumbnail = (videoId: string) =>
+  `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
 
 export default function Testimonials() {
   const [activeId, setActiveId] = useState(testimonials[0].id);
@@ -50,8 +51,8 @@ export default function Testimonials() {
           </h2>
           <div className="mx-auto my-6 h-px w-24 bg-gold" />
           <p className="mx-auto max-w-3xl text-charcoal/70">
-            Discover how our integrated curriculum and hands-on hospital exposure shape the
-            journeys of our B.A.M.S. students.
+            Discover how our integrated curriculum and hands-on hospital exposure shape the journeys
+            of our B.A.M.S. students.
           </p>
         </div>
 

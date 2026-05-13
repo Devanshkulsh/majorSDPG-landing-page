@@ -1,11 +1,6 @@
 import { motion } from "framer-motion";
 import { useRef } from "react";
-import {
-  FiSearch,
-  FiFileText,
-  FiCheckCircle,
-  FiBookOpen,
-} from "react-icons/fi";
+import { FiSearch, FiFileText, FiCheckCircle, FiBookOpen } from "react-icons/fi";
 import SectionLabel from "./SectionLabel";
 
 // Replace with your actual STEPS import if needed; icons are mapped by index below
@@ -69,24 +64,20 @@ export default function AdmissionsProcess() {
                   <div
                     className="absolute inset-0 bg-gold/10 group-hover:bg-gold/20 transition-colors duration-500"
                     style={{
-                      clipPath:
-                        "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
+                      clipPath: "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
                     }}
                   />
                   {/* The Inner Hexagon Border */}
                   <div
                     className="absolute inset-0.5 bg-charcoal-deep"
                     style={{
-                      clipPath:
-                        "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
+                      clipPath: "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
                     }}
                   />
 
                   {/* Content inside Hexagon */}
                   <div className="relative z-10 flex flex-col items-center gap-1">
-                    <span className="text-gold font-black text-xl drop-shadow-md">
-                      {i + 1}
-                    </span>
+                    <span className="text-gold font-black text-xl drop-shadow-md">{i + 1}</span>
                     <Icon
                       size={22}
                       className="text-gold/80 group-hover:text-gold group-hover:scale-110 transition-all duration-300"
@@ -99,9 +90,7 @@ export default function AdmissionsProcess() {
                   <h3 className="text-cream font-bold text-xl mb-3 group-hover:text-gold transition-colors">
                     {s.title}
                   </h3>
-                  <p className="text-cream/60 text-sm leading-relaxed">
-                    {s.desc}
-                  </p>
+                  <p className="text-cream/60 text-sm leading-relaxed">{s.desc}</p>
                 </div>
               </motion.div>
             );

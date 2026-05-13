@@ -7,7 +7,8 @@ const SOCIAL = [
     icon: FaInstagram,
     href: "https://www.instagram.com/majorsdsinghpg/",
     label: "Instagram",
-    hover: "hover:bg-gradient-to-br hover:from-purple-500 hover:via-pink-500 hover:to-orange-400 hover:border-transparent",
+    hover:
+      "hover:bg-gradient-to-br hover:from-purple-500 hover:via-pink-500 hover:to-orange-400 hover:border-transparent",
   },
   {
     icon: FaFacebookF,
@@ -91,31 +92,40 @@ export default function Footer() {
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-175 h-75 bg-gold/5 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-6">
-
         {/* Main grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-14">
-
           {/* Brand column — spans 2 cols on lg */}
           <div className="lg:col-span-2">
             {/* Logo + name */}
             <div className="flex items-center gap-3 mb-5">
               <div className="relative">
                 <div className="absolute inset-0 bg-gold/20 rounded-full blur-md" />
-                <img src={logo} alt="MSDS AMCH" className="relative h-15 w-20 md:h-15 md:w-15 rounded-full object-cover ring-2 ring-gold/30" />
+                <img
+                  src={logo}
+                  alt="MSDS AMCH"
+                  className="relative h-15 w-20 md:h-15 md:w-15 rounded-full object-cover ring-2 ring-gold/30"
+                />
               </div>
               <div>
-                <p className="text-gold font-black text-balance leading-tight tracking-wide">Major S. D. Singh Ayurvedic Medical College</p>
-                <p className="text-cream/40 text-[10px] uppercase tracking-widest">Est. Since Decades</p>
+                <p className="text-gold font-black text-balance leading-tight tracking-wide">
+                  Major S. D. Singh Ayurvedic Medical College
+                </p>
+                <p className="text-cream/40 text-[10px] uppercase tracking-widest">
+                  Est. Since Decades
+                </p>
               </div>
             </div>
 
             <p className="text-cream/55 text-sm leading-relaxed mb-6 max-w-xs">
-              Preserving ancient Ayurvedic wisdom while building the next generation of modern healers at one of India's premier AYUSH institutions.
+              Preserving ancient Ayurvedic wisdom while building the next generation of modern
+              healers at one of India's premier AYUSH institutions.
             </p>
 
             {/* Social icons */}
             <div>
-              <p className="text-gold/60 text-[10px] uppercase tracking-widest font-semibold mb-3">Follow Us</p>
+              <p className="text-gold/60 text-[10px] uppercase tracking-widest font-semibold mb-3">
+                Follow Us
+              </p>
               <div className="flex items-center gap-2">
                 {SOCIAL.map(({ icon: Icon, href, label, hover }) => (
                   <a
@@ -190,11 +200,17 @@ export default function Footer() {
         <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] text-cream/35">
           <p>© 2025 Major SD Singh PG Ayurvedic Medical College & Hospital. All Rights Reserved.</p>
           <div className="flex items-center gap-4">
-            <a href="#" className="hover:text-gold transition-colors">Privacy</a>
+            <a href="#" className="hover:text-gold transition-colors">
+              Privacy
+            </a>
             <span className="text-gold/20">·</span>
-            <a href="#" className="hover:text-gold transition-colors">Terms</a>
+            <a href="#" className="hover:text-gold transition-colors">
+              Terms
+            </a>
             <span className="text-gold/20">·</span>
-            <a href="#" className="hover:text-gold transition-colors">Refund</a>
+            <a href="#" className="hover:text-gold transition-colors">
+              Refund
+            </a>
           </div>
         </div>
       </div>

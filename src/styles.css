@@ -1,20 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 @import "tailwindcss" source(none);
 @source "../src";
 @import "tw-animate-css";
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
 @theme inline {
-  --font-sans: 'Poppins', sans-serif;
-  --color-gold: #F5B800;
-  --color-gold-dark: #C99A00;
-  --color-sky: #29B6D8;
-  --color-sky-dark: #1A8FAD;
-  --color-green: #2E7D32;
-  --color-green-light: #4CAF50;
-  --color-maroon: #8B0000;
-  --color-charcoal: #1A1A2E;
-  --color-charcoal-deep: #0D0D1A;
-  --color-cream: #FFFDF4;
+  --font-sans: "Poppins", sans-serif;
+  --color-gold: #f5b800;
+  --color-gold-dark: #c99a00;
+  --color-sky: #29b6d8;
+  --color-sky-dark: #1a8fad;
+  --color-green: #2e7d32;
+  --color-green-light: #4caf50;
+  --color-maroon: #8b0000;
+  --color-charcoal: #1a1a2e;
+  --color-charcoal-deep: #0d0d1a;
+  --color-cream: #fffdf4;
   --color-background: var(--color-cream);
   --color-foreground: var(--color-charcoal);
   --color-border: rgba(245, 184, 0, 0.2);
@@ -28,29 +28,59 @@
 }
 
 @keyframes shimmer {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 200% 50%; }
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 200% 50%;
+  }
 }
 @keyframes marquee {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
 @keyframes bounce-slow {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(10px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
 }
 @keyframes pulse-dot {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.5; transform: scale(1.4); }
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.4);
+  }
 }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+}
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   background-color: var(--color-cream);
   color: var(--color-charcoal);
   -webkit-font-smoothing: antialiased;
 }
-::-webkit-scrollbar { width: 10px; }
-::-webkit-scrollbar-track { background: #0D0D1A; }
-::-webkit-scrollbar-thumb { background: #F5B800; border-radius: 10px; }
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0d0d1a;
+}
+::-webkit-scrollbar-thumb {
+  background: #f5b800;
+  border-radius: 10px;
+}

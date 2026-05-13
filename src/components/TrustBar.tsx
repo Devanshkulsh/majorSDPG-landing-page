@@ -1,14 +1,36 @@
 import { TRUST_ITEMS } from "@/constants/data";
+
 export default function TrustBar() {
-  const items = [...TRUST_ITEMS, ...TRUST_ITEMS];
+  // Triple the items to ensure no gaps on very wide screens or during fast scrolls
+  const items = [...TRUST_ITEMS, ...TRUST_ITEMS, ...TRUST_ITEMS];
+
   return (
-    <section className="bg-gold py-5 overflow-hidden border-y-2 border-gold-dark">
-      <div className="flex animate-[marquee_30s_linear_infinite] whitespace-nowrap">
-        {items.map((t, i) => (
-          <span key={i} className="text-charcoal font-semibold text-sm md:text-base mx-8 inline-flex items-center gap-3 uppercase tracking-wider">
-            <span className="text-charcoal/60">✦</span> {t}
-          </span>
-        ))}
+    <section className="bg-gold py-3 md:py-5 overflow-hidden border-y border-gold-dark/30 relative">
+      <div className="flex items-center">
+        <div className="flex animate-[marquee_30s_linear_infinite] whitespace-nowrap will-change-transform">
+          {items.map((t, i) => (
+            <span 
+              key={i} 
+              className="text-charcoal font-bold text-[10px] xs:text-xs md:text-base mx-4 md:mx-10 inline-flex items-center gap-2 md:gap-4 uppercase tracking-widest sm:tracking-tighter lg:tracking-widest"
+            >
+              <span className="text-charcoal/40 text-xs md:text-xl">✦</span> 
+              {t}
+            </span>
+          ))}
+        </div>
+        
+        {/* Duplicate set for seamless looping coverage */}
+        <div className="flex animate-[marquee_30s_linear_infinite] whitespace-nowrap aria-hidden:true will-change-transform">
+          {items.map((t, i) => (
+            <span 
+              key={`dup-${i}`} 
+              className="text-charcoal font-bold text-[10px] xs:text-xs md:text-base mx-4 md:mx-10 inline-flex items-center gap-2 md:gap-4 uppercase tracking-widest sm:tracking-tighter lg:tracking-widest"
+            >
+              <span className="text-charcoal/40 text-xs md:text-xl">✦</span> 
+              {t}
+            </span>
+          ))}
+        </div>
       </div>
     </section>
   );

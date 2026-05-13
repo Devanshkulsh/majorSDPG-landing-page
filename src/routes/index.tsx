@@ -8,7 +8,7 @@ import Facilities from "@/components/Facilities";
 import AdmissionsProcess from "@/components/AdmissionsProcess";
 // import LeadForm from "@/components/LeadForm";
 // import Testimonials from "@/components/Testimonials";
-// import FAQ from "@/components/FAQ";
+import FAQ from "@/components/FAQ";
 // import Contact from "@/components/Contact";
 // import Footer from "@/components/Footer";
 
@@ -34,7 +34,7 @@ function Index() {
       <AdmissionsProcess />
       {/* <LeadForm /> */}
       {/* <Testimonials /> */}
-      {/* <FAQ /> */}
+      <FAQ />
       {/* <Contact /> */}
       {/* <Footer /> */}
     </main>

@@ -21,7 +21,7 @@ export default function About() {
           whileInView={{ opacity: 1, x: 0 }} 
           viewport={{ once: true }} 
           transition={{ duration: 0.7 }} 
-          className="relative h-[320px] sm:h-[400px] md:h-[460px] flex items-center justify-center order-2 lg:order-1"
+          className="relative h-80 sm:h-100 md:h-115 flex items-center justify-center order-2 lg:order-1"
         >
           {/* Mandala SVG - Scaled for mobile */}
           <svg className="absolute inset-0 w-full h-full opacity-20 animate-[spin_60s_linear_infinite] scale-75 sm:scale-100" viewBox="0 0 400 400">
@@ -33,7 +33,7 @@ export default function About() {
           </svg>
           
           {/* Stats Grid */}
-          <div className="relative grid grid-cols-2 gap-3 sm:gap-4 w-full max-w-[280px] sm:max-w-sm">
+          <div className="relative grid grid-cols-2 gap-3 sm:gap-4 w-full max-w-70 sm:max-w-sm">
             {ABOUT_STATS.map((s, i) => (
               <motion.div 
                 key={s.label} 

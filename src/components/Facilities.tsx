@@ -114,7 +114,7 @@ export default function Facilities() {
           <SectionLabel>Campus & Infrastructure</SectionLabel>
           <h2 className="mt-4 text-3xl md:text-5xl font-bold text-charcoal leading-tight">
             World-Class Infrastructure for{" "}
-            <span className="text-gold-dark">Future Healers</span>
+            <span className="text-gold-dark">Students</span>
           </h2>
           <p className="mt-4 text-charcoal/50 max-w-xl mx-auto text-base">
             Every corner of our campus is designed to inspire, educate, and heal.

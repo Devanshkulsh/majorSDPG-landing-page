@@ -4,8 +4,8 @@ import Hero from "@/components/Hero";
 import TrustBar from "@/components/TrustBar";
 import About from "@/components/About";
 // import Courses from "@/components/Courses";
-// import Facilities from "@/components/Facilities";
-// import AdmissionsProcess from "@/components/AdmissionsProcess";
+import Facilities from "@/components/Facilities";
+import AdmissionsProcess from "@/components/AdmissionsProcess";
 // import LeadForm from "@/components/LeadForm";
 // import Testimonials from "@/components/Testimonials";
 // import FAQ from "@/components/FAQ";
@@ -30,8 +30,8 @@ function Index() {
       <TrustBar />
       <About />
       {/* <Courses /> */}
-      {/* <Facilities /> */}
-      {/* <AdmissionsProcess /> */}
+      <Facilities />
+      <AdmissionsProcess />
       {/* <LeadForm /> */}
       {/* <Testimonials /> */}
       {/* <FAQ /> */}

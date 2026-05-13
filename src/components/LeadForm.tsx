@@ -6,7 +6,7 @@ const LEAD_FORM_DIV_ID = "formsID7375-lead";
 
 const TRUST = [
   "Free Counselling - No obligation",
-  "CCIM Approved Programs",
+  "NCISM Approved Programs",
   "Seats Filling Fast for 2026-27",
   "Scholarship information available",
 ];

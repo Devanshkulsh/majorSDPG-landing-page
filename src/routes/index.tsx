@@ -11,6 +11,7 @@ import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import ChatBot from "@/components/ChatBot";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -20,7 +21,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Apply for BAMS and MS (Prasuti Tantra, Shalya Tantra) at MSDSPG. CCIM approved, 40+ years legacy, 200-bed teaching hospital. Admissions open.",
+          "Apply for BAMS and MS (Prasuti Tantra, Shalya Tantra) at MSDSPG. NCISM approved, 20+ years legacy, 200-bed teaching hospital. Admissions open.",
       },
     ],
   }),
@@ -41,6 +42,7 @@ function Index() {
       <FAQ />
       <Contact />
       <Footer />
+      <ChatBot />
     </main>
   );
 }

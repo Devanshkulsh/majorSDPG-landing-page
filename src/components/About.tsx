@@ -4,7 +4,7 @@ import CountUp from "./CountUp";
 import SectionLabel from "./SectionLabel";
 
 const POINTS = [
-  { icon: "✓", title: "CCIM & State Govt. Recognized" },
+  { icon: "✓", title: "NCISM & State Govt. Recognized" },
   { icon: "📖", title: "Experienced Vaidyas & Professors" },
   { icon: "🏥", title: "Full Teaching Hospital Attached" },
   { icon: "🌿", title: "Holistic Residential Campus" },
@@ -95,7 +95,7 @@ export default function About() {
           <p className="text-charcoal/75 text-sm sm:text-base leading-relaxed mb-4">
             Major SD Singh PG Ayurvedic Medical College & Hospital is a premier institution
             dedicated to the timeless science of Ayurveda. Affiliated with the state university and
-            approved by CCIM, we have nurtured thousands of physicians and surgeons over four
+            approved by NCISM, we have nurtured thousands of physicians and surgeons over four
             decades.
           </p>
           <p className="text-charcoal/75 text-sm sm:text-base leading-relaxed mb-8">

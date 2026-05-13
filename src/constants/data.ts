@@ -24,11 +24,11 @@ export const STATS = [
   { value: 40, suffix: "+", label: "Years of Excellence", icon: "🏥" },
   { value: 5000, suffix: "+", label: "Alumni Doctors", icon: "👨‍⚕️" },
   { value: 3, suffix: "", label: "Specialized Programs", icon: "🎓" },
-  { value: 100, suffix: "%", label: "CCIM Approved", icon: "✅" },
+  { value: 100, suffix: "%", label: "NCISM Approved", icon: "✅" },
 ];
 
 export const ABOUT_STATS = [
-  { value: 40, suffix: "+", label: "Years Established" },
+  { value: 20, suffix: "+", label: "Years Established" },
   { value: 200, suffix: "+", label: "Beds Hospital" },
   { value: 50, suffix: "+", label: "Expert Faculty" },
   { value: 5000, suffix: "+", label: "Graduates" },
@@ -221,8 +221,8 @@ export const FAQS = [
     a: "Yes, candidates must have cleared AIAPGET (All India Ayush PG Entrance Test) for PG programs.",
   },
   {
-    q: "Is the college CCIM approved?",
-    a: "Yes, the college is fully approved by CCIM (Central Council of Indian Medicine) and affiliated with the state university.",
+    q: "Is the college NCISM approved?",
+    a: "Yes, the college is fully approved by NCISM (Central Council of Indian Medicine) and affiliated with the state university.",
   },
   {
     q: "Are hostel facilities available?",
@@ -239,9 +239,9 @@ export const FAQS = [
 ];
 
 export const TRUST_ITEMS = [
-  "CCIM Approved",
+  "NCISM Approved",
   "University Affiliated",
-  "40+ Years Legacy",
+  "20+ Years Legacy",
   "State-of-the-Art Hospital",
   "Experienced Faculty",
   "Lush Campus",

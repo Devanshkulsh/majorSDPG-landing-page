@@ -5,8 +5,8 @@
 
 @theme inline {
   --font-sans: "Poppins", sans-serif;
-  --color-gold: #f5b800;
-  --color-gold-dark: #c99a00;
+  --color-gold: #f2952b;
+  --color-gold-dark: #c97212;
   --color-sky: #29b6d8;
   --color-sky-dark: #1a8fad;
   --color-green: #2e7d32;
@@ -17,7 +17,7 @@
   --color-cream: #fffdf4;
   --color-background: var(--color-cream);
   --color-foreground: var(--color-charcoal);
-  --color-border: rgba(245, 184, 0, 0.2);
+  --color-border: rgba(242, 149, 43, 0.22);
   --color-ring: var(--color-gold);
   --radius-lg: 0.75rem;
   --animate-shimmer: shimmer 3s ease-in-out infinite;
@@ -81,6 +81,6 @@ body {
   background: #0d0d1a;
 }
 ::-webkit-scrollbar-thumb {
-  background: #f5b800;
+  background: #f2952b;
   border-radius: 10px;
 }

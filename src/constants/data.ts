@@ -1,3 +1,14 @@
+import {
+  FaBookOpen,
+  FaDumbbell,
+  FaFlask,
+  FaHospital,
+  FaLeaf,
+  FaPeopleGroup,
+  FaSchool,
+  FaUserDoctor,
+} from "react-icons/fa6";
+
 export const NAV_LINKS = [
   { label: "Home", href: "#home" },
   { label: "Courses", href: "#courses" },
@@ -82,12 +93,15 @@ export const COURSES = [
 ];
 
 export const FACILITIES = [
-  { icon: "🏥", title: "Teaching Hospital", desc: "200+ bed hospital with OPD, IPD, OT, and specialty clinics for real clinical exposure" },
-  { icon: "📚", title: "Central Library", desc: "10,000+ volumes of Ayurvedic classics, journals, and digital databases" },
-  { icon: "🧪", title: "Modern Laboratories", desc: "Dravyaguna herb gardens, pharmacognosy lab, anatomy dissection hall" },
-  { icon: "🌿", title: "Herbal Garden", desc: "On-campus medicinal plant garden with 300+ species for hands-on learning" },
-  { icon: "🏠", title: "Residential Campus", desc: "Separate hostels for boys and girls, mess facility, sports grounds" },
-  { icon: "🎓", title: "Skilled Faculty", desc: "50+ qualified Vaidyas and professors with decades of clinical and academic experience" },
+  { icon: FaHospital, title: "Teaching Hospital", desc: "200+ bed hospital with OPD, IPD, OT, and specialty clinics for real clinical exposure" },
+  { icon: FaBookOpen, title: "Central Library", desc: "10,000+ volumes of Ayurvedic classics, journals, and digital databases" },
+  { icon: FaFlask, title: "Modern Laboratories", desc: "Dravyaguna herb gardens, pharmacognosy lab, anatomy dissection hall" },
+  { icon: FaLeaf, title: "Herbal Garden", desc: "On-campus medicinal plant garden with 300+ species for hands-on learning" },
+  { icon: FaSchool, title: "Hostel Facility", desc: "Separate hostels for boys and girls with secure, comfortable on-campus living" },
+  { icon: FaDumbbell, title: "Gym", desc: "Well-equipped fitness center to support student health and daily training" },
+  { icon: FaPeopleGroup, title: "Sports & Clubs", desc: "Active sports programs and student clubs for teamwork, leadership, and recreation" },
+  { icon: FaSchool, title: "Residential Campus", desc: "Separate hostels for boys and girls, mess facility, sports grounds" },
+  { icon: FaUserDoctor, title: "Skilled Faculty", desc: "50+ qualified Vaidyas and professors with decades of clinical and academic experience" },
 ];
 
 export const STEPS = [

@@ -197,20 +197,12 @@ export default function Footer() {
         <div className="h-px bg-linear-to-r from-transparent via-gold/20 to-transparent mb-6" />
 
         {/* Bottom bar */}
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] text-cream/35">
-          <p>© 2025 Major SD Singh PG Ayurvedic Medical College & Hospital. All Rights Reserved.</p>
-          <div className="flex items-center gap-4">
-            <a href="#" className="hover:text-gold transition-colors">
-              Privacy
-            </a>
-            <span className="text-gold/20">·</span>
-            <a href="#" className="hover:text-gold transition-colors">
-              Terms
-            </a>
-            <span className="text-gold/20">·</span>
-            <a href="#" className="hover:text-gold transition-colors">
-              Refund
-            </a>
+        <div className="flex flex-col sm:flex-row items-center sm:items-center justify-between gap-2 sm:gap-3 text-center sm:text-left text-[11px] text-cream/35">
+          <p>© 2026 Major SD Singh PG Ayurvedic Medical College & Hospital. All Rights Reserved.</p>
+          <div className="flex items-center sm:justify-end">
+            <span>
+              Developed & Maintained by <a href="https://www.ntechzy.in" className="hover:text-gold transition-colors" >Ntechzy</a>
+            </span>
           </div>
         </div>
       </div>

@@ -1,7 +1,15 @@
 import { useEffect, useRef, useState } from "react";
 import { useInView } from "framer-motion";
 
-export default function CountUp({ end, suffix = "", duration = 1800 }: { end: number; suffix?: string; duration?: number }) {
+export default function CountUp({
+  end,
+  suffix = "",
+  duration = 1800,
+}: {
+  end: number;
+  suffix?: string;
+  duration?: number;
+}) {
   const ref = useRef<HTMLSpanElement>(null);
   const inView = useInView(ref, { once: true, margin: "-50px" });
   const [v, setV] = useState(0);
@@ -17,5 +25,10 @@ export default function CountUp({ end, suffix = "", duration = 1800 }: { end: nu
     raf = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(raf);
   }, [inView, end, duration]);
-  return <span ref={ref}>{v.toLocaleString()}{suffix}</span>;
+  return (
+    <span ref={ref}>
+      {v.toLocaleString()}
+      {suffix}
+    </span>
+  );
 }

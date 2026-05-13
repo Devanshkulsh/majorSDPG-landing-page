@@ -162,30 +162,89 @@ export const FACILITIES = [
 ];
 
 export const STEPS = [
-  { icon: "✅", title: "Check Eligibility", desc: "Verify your academic qualifications and NEET/entrance scores" },
-  { icon: "📋", title: "Fill Application", desc: "Complete the online enquiry form below or download the application" },
-  { icon: "📞", title: "Counselling Call", desc: "Our admissions team will contact you for guidance and document verification" },
-  { icon: "🎓", title: "Confirm Admission", desc: "Submit documents, pay fees, and secure your seat" },
+  {
+    icon: "✅",
+    title: "Check Eligibility",
+    desc: "Verify your academic qualifications and NEET/entrance scores",
+  },
+  {
+    icon: "📋",
+    title: "Fill Application",
+    desc: "Complete the online enquiry form below or download the application",
+  },
+  {
+    icon: "📞",
+    title: "Counselling Call",
+    desc: "Our admissions team will contact you for guidance and document verification",
+  },
+  {
+    icon: "🎓",
+    title: "Confirm Admission",
+    desc: "Submit documents, pay fees, and secure your seat",
+  },
 ];
 
 export const TESTIMONIALS = [
-  { quote: "MSDS AMCH gave me the foundation I needed. The clinical exposure in the attached hospital was unparalleled, and my professors were true Vaidyas in every sense.", name: "Dr. Ankit Verma", role: "BAMS 2019, Practicing in Lucknow" },
-  { quote: "The MS Shalya Tantra program here is exceptional. The Ksharasutra training and OT postings prepared me for real surgical practice.", name: "Dr. Rekha Singh", role: "MS Shalya Tantra 2022" },
-  { quote: "From the herbal garden to the hospital wards — this campus gave me both knowledge and confidence. Best decision of my life.", name: "Dr. Meena Gupta", role: "BAMS 2020, Now in Delhi" },
-  { quote: "The faculty's depth in classical texts combined with modern clinical training is rare. I owe my career to MSDS AMCH.", name: "Dr. Priya Sharma", role: "MS Prasuti Tantra 2021" },
+  {
+    quote:
+      "MSDS AMCH gave me the foundation I needed. The clinical exposure in the attached hospital was unparalleled, and my professors were true Vaidyas in every sense.",
+    name: "Dr. Ankit Verma",
+    role: "BAMS 2019, Practicing in Lucknow",
+  },
+  {
+    quote:
+      "The MS Shalya Tantra program here is exceptional. The Ksharasutra training and OT postings prepared me for real surgical practice.",
+    name: "Dr. Rekha Singh",
+    role: "MS Shalya Tantra 2022",
+  },
+  {
+    quote:
+      "From the herbal garden to the hospital wards — this campus gave me both knowledge and confidence. Best decision of my life.",
+    name: "Dr. Meena Gupta",
+    role: "BAMS 2020, Now in Delhi",
+  },
+  {
+    quote:
+      "The faculty's depth in classical texts combined with modern clinical training is rare. I owe my career to MSDS AMCH.",
+    name: "Dr. Priya Sharma",
+    role: "MS Prasuti Tantra 2021",
+  },
 ];
 
 export const FAQS = [
-  { q: "What is the eligibility for BAMS admission?", a: "10+2 with Physics, Chemistry, Biology; minimum 50% marks; NEET-UG qualified." },
-  { q: "Is NEET required for MS (PG) admissions?", a: "Yes, candidates must have cleared AIAPGET (All India Ayush PG Entrance Test) for PG programs." },
-  { q: "Is the college CCIM approved?", a: "Yes, the college is fully approved by CCIM (Central Council of Indian Medicine) and affiliated with the state university." },
-  { q: "Are hostel facilities available?", a: "Yes, separate hostel facilities for boys and girls are available on campus with mess and sports amenities." },
-  { q: "What is the course duration for BAMS?", a: "5½ years including a compulsory one-year internship." },
-  { q: "How do I apply?", a: "Fill the enquiry form above or call our admissions office directly. Our counsellors will guide you through the process." },
+  {
+    q: "What is the eligibility for BAMS admission?",
+    a: "10+2 with Physics, Chemistry, Biology; minimum 50% marks; NEET-UG qualified.",
+  },
+  {
+    q: "Is NEET required for MS (PG) admissions?",
+    a: "Yes, candidates must have cleared AIAPGET (All India Ayush PG Entrance Test) for PG programs.",
+  },
+  {
+    q: "Is the college CCIM approved?",
+    a: "Yes, the college is fully approved by CCIM (Central Council of Indian Medicine) and affiliated with the state university.",
+  },
+  {
+    q: "Are hostel facilities available?",
+    a: "Yes, separate hostel facilities for boys and girls are available on campus with mess and sports amenities.",
+  },
+  {
+    q: "What is the course duration for BAMS?",
+    a: "5½ years including a compulsory one-year internship.",
+  },
+  {
+    q: "How do I apply?",
+    a: "Fill the enquiry form above or call our admissions office directly. Our counsellors will guide you through the process.",
+  },
 ];
 
 export const TRUST_ITEMS = [
-  "CCIM Approved", "University Affiliated", "40+ Years Legacy",
-  "State-of-the-Art Hospital", "Experienced Faculty", "Lush Campus",
-  "Residential Facilities", "BAMS + PG Programs",
+  "CCIM Approved",
+  "University Affiliated",
+  "40+ Years Legacy",
+  "State-of-the-Art Hospital",
+  "Experienced Faculty",
+  "Lush Campus",
+  "Residential Facilities",
+  "BAMS + PG Programs",
 ];

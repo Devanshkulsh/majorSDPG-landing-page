@@ -8,17 +8,27 @@ export default function Footer() {
             <img src={logo} alt="MSDS AMCH" className="h-12 w-12" />
             <span className="text-gold font-bold text-lg">MSDS AMCH</span>
           </div>
-          <p className="text-cream/60 text-sm leading-relaxed">Preserving Ancient Wisdom. Building Modern Healers.</p>
+          <p className="text-cream/60 text-sm leading-relaxed">
+            Preserving Ancient Wisdom. Building Modern Healers.
+          </p>
         </div>
         {[
           { h: "Programs", links: ["BAMS", "MS Prasuti Tantra", "MS Shalya Tantra"] },
           { h: "Quick Links", links: ["About", "Facilities", "Admissions", "Contact"] },
           { h: "Legal", links: ["Privacy Policy", "Terms of Use", "Refund Policy"] },
-        ].map(col => (
+        ].map((col) => (
           <div key={col.h}>
-            <h4 className="text-gold font-semibold mb-4 text-sm uppercase tracking-wider">{col.h}</h4>
+            <h4 className="text-gold font-semibold mb-4 text-sm uppercase tracking-wider">
+              {col.h}
+            </h4>
             <ul className="space-y-2">
-              {col.links.map(l => <li key={l}><a href="#" className="text-cream/60 hover:text-gold text-sm">{l}</a></li>)}
+              {col.links.map((l) => (
+                <li key={l}>
+                  <a href="#" className="text-cream/60 hover:text-gold text-sm">
+                    {l}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
         ))}

@@ -29,17 +29,12 @@ export default function Hero() {
   return (
     <section id="home" className="relative min-h-screen w-full overflow-x-hidden bg-charcoal-deep">
       <div className="absolute inset-0 z-0">
-        <img 
-          src="/hero.webp" 
-          alt="College Campus" 
-          className="h-full w-full object-cover" 
-        />
+        <img src="/hero.webp" alt="College Campus" className="h-full w-full object-cover" />
         <div className="absolute inset-0 bg-linear-to-b from-charcoal-deep/95 via-charcoal-deep/80 to-charcoal-deep/90 sm:bg-linear-to-r" />
       </div>
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8 lg:py-32 xl:py-40">
         <div className="flex flex-col items-center gap-12 lg:flex-row lg:items-center lg:gap-12 xl:gap-20">
-          
           {/* Text Content */}
           <motion.div
             className="flex w-full flex-1 flex-col items-center text-center lg:items-start lg:text-left"
@@ -62,7 +57,8 @@ export default function Hero() {
               variants={item}
               className="mb-4 text-3xl font-extrabold leading-[1.15] text-cream sm:text-5xl lg:text-6xl xl:text-7xl"
             >
-              <span className="text-gold">Major S. D. Singh</span> <br className="hidden sm:block" />
+              <span className="text-gold">Major S. D. Singh</span>{" "}
+              <br className="hidden sm:block" />
               Ayurvedic Medical College
             </motion.h1>
 
@@ -77,8 +73,8 @@ export default function Hero() {
               variants={item}
               className="mb-8 max-w-2xl text-sm leading-relaxed text-cream/70 sm:text-base md:text-lg"
             >
-              Join Major SD Singh PG Ayurvedic Medical College & Hospital for a focused B.A.M.S. 
-              journey built on strong classroom learning, extensive hospital exposure, and a 
+              Join Major SD Singh PG Ayurvedic Medical College & Hospital for a focused B.A.M.S.
+              journey built on strong classroom learning, extensive hospital exposure, and a
               disciplined approach to professional practice.
             </motion.p>
 
@@ -117,12 +113,11 @@ export default function Hero() {
                 className="h-125 w-full overflow-y-auto bg-white sm:h-137.5"
               />
             </div>
-            
+
             {/* Decorative element */}
             <div className="absolute -bottom-6 -right-6 -z-10 h-32 w-32 rounded-full bg-gold/20 blur-3xl" />
             <div className="absolute -top-6 -left-6 -z-10 h-32 w-32 rounded-full bg-sky/20 blur-3xl" />
           </motion.div>
-
         </div>
       </div>
     </section>

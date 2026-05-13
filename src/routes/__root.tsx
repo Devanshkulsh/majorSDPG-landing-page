@@ -125,7 +125,8 @@ function RootShell({ children }: { children: React.ReactNode }) {
           {...({
             path: '["/", "/dynamicForm/index.html","/"]',
             divid: "formsID7375",
-            courses: '["Select Course", "MBBS", "BDS", "BAMS", "BHMS", "BUMS", "BNYS", "BSc. Nursing", "Veterinary"]',
+            courses:
+              '["Select Course", "MBBS", "BDS", "BAMS", "BHMS", "BUMS", "BNYS", "BSc. Nursing", "Veterinary"]',
             styles: "classic",
             logo: "/logo.webp",
             contact: "7300864280",

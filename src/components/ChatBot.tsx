@@ -128,7 +128,7 @@ export default function ChatBot() {
             initial={{ opacity: 0, y: 40, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 40, scale: 0.95 }}
-            className="fixed inset-x-3 bottom-3 z-50 flex h-[78dvh] max-h-160 w-auto flex-col overflow-hidden rounded-2xl border border-gold/20 bg-cream shadow-2xl sm:right-6 sm:bottom-24 sm:left-auto sm:top-auto sm:h-125 sm:w-85 sm:max-w-[92vw] sm:translate-y-0"
+            className="fixed inset-x-3 bottom-3 z-50 flex h-[78dvh] max-h-160 w-auto max-w-[calc(100vw-1.5rem)] flex-col overflow-x-hidden overflow-y-hidden rounded-2xl border border-gold/20 bg-cream shadow-2xl sm:right-6 sm:bottom-24 sm:left-auto sm:top-auto sm:h-125 sm:w-85 sm:max-w-[92vw] sm:translate-y-0"
           >
             <div className="flex items-center justify-between bg-linear-to-r from-gold to-gold-dark px-4 py-3 font-semibold text-charcoal">
               <span>Admissions Assistant</span>
@@ -167,7 +167,7 @@ export default function ChatBot() {
                   <button
                     key={opt}
                     onClick={() => handleClick(opt)}
-                    className="rounded-full bg-gold/10 px-3 py-2.5 text-xs text-gold-dark transition hover:bg-gold hover:text-charcoal"
+                    className="max-w-full whitespace-normal rounded-full bg-gold/10 px-3 py-2.5 text-xs text-gold-dark transition hover:bg-gold hover:text-charcoal"
                   >
                     {opt}
                   </button>

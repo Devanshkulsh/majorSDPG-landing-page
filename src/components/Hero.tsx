@@ -103,7 +103,7 @@ export default function Hero() {
               </div>
               <div
                 id={APPLICATION_FORM_DIV_ID}
-                className="h-118 w-full overflow-y-hidden bg-white sm:h-156"
+                className="h-118 w-full overflow-x-hidden overflow-y-hidden bg-white **:max-w-full sm:h-156"
               />
             </div>
 

@@ -23,6 +23,31 @@ export const Route = createFileRoute("/")({
         content:
           "Apply for BAMS and MS (Prasuti Tantra, Shalya Tantra) at MSDSPG. NCISM approved, 20+ years legacy, 200-bed teaching hospital. Admissions open.",
       },
+      {
+        property: "og:title",
+        content: "MSDSPG- Major SD Singh PG Ayurvedic Medical College | Admissions 2026-27",
+      },
+      {
+        property: "og:description",
+        content:
+          "Apply for BAMS and MS (Prasuti Tantra, Shalya Tantra) at MSDSPG. NCISM approved, 20+ years legacy, 200-bed teaching hospital. Admissions open.",
+      },
+      { property: "og:url", content: "https://majorsdspgamc.com/" },
+      { name: "twitter:title", content: "MSDSPG- Major SD Singh PG Ayurvedic Medical College" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          name: "MSDSPG Admissions",
+          url: "https://majorsdspgamc.com/",
+          description:
+            "Admissions page for Major SD Singh PG Ayurvedic Medical College with BAMS and PG course details.",
+          inLanguage: "en-IN",
+        }),
+      },
     ],
   }),
 });

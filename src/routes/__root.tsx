@@ -10,6 +10,13 @@ import {
 
 import appCss from "../styles.css?url";
 
+const SITE_URL = "https://majorsdspgamc.com";
+const SITE_NAME = "Major S.D. Singh P.G. Ayurvedic Medical College & Hospital";
+const DEFAULT_TITLE = "MSDSPG | Major S.D. Singh P.G. Ayurvedic Medical College Admissions";
+const DEFAULT_DESCRIPTION =
+  "Apply for BAMS and PG Ayurveda programs at Major S.D. Singh P.G. Ayurvedic Medical College & Hospital. NCISM approved college with strong clinical exposure and experienced faculty.";
+const OG_IMAGE = `${SITE_URL}/thumnail.webp`;
+
 function NotFoundComponent() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
@@ -72,19 +79,37 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Major S.D.P.G Ayurvedic Medical College Apply" },
-      { name: "description", content: "Major S.D.P.G Ayurvedic Medical College" },
-      { name: "author", content: "Major S.D.P.G Ayurvedic Medical College Team" },
-      { property: "og:title", content: "Major S.D.P.G Ayurvedic Medical College Apply" },
-      { property: "og:description", content: "Major S.D.P.G Ayurvedic Medical College" },
+      { title: DEFAULT_TITLE },
+      { name: "description", content: DEFAULT_DESCRIPTION },
+      { name: "author", content: "Major S.D. Singh P.G. Ayurvedic Medical College Team" },
+      {
+        name: "keywords",
+        content:
+          "BAMS admission, Ayurveda college admission, MSDSPG college, Major SD Singh PG Ayurvedic Medical College, NCISM approved BAMS, Ayurveda PG courses",
+      },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
+      { name: "googlebot", content: "index, follow, max-image-preview:large" },
+      { property: "og:site_name", content: SITE_NAME },
+      { property: "og:locale", content: "en_IN" },
+      { property: "og:title", content: DEFAULT_TITLE },
+      { property: "og:description", content: DEFAULT_DESCRIPTION },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: SITE_URL },
+      { property: "og:image", content: OG_IMAGE },
+      { property: "og:image:alt", content: "Major SD Singh PG Ayurvedic Medical College campus" },
       { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@wisdompath" },
+      { name: "twitter:title", content: DEFAULT_TITLE },
+      { name: "twitter:description", content: DEFAULT_DESCRIPTION },
+      { name: "twitter:image", content: OG_IMAGE },
     ],
     links: [
       {
         rel: "stylesheet",
         href: appCss,
+      },
+      {
+        rel: "canonical",
+        href: SITE_URL,
       },
       {
         rel: "icon",
@@ -116,6 +141,20 @@ function RootShell({ children }: { children: React.ReactNode }) {
     <html lang="en">
       <head>
         <HeadContent />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "CollegeOrUniversity",
+              name: SITE_NAME,
+              url: SITE_URL,
+              logo: `${SITE_URL}/logo.webp`,
+              image: OG_IMAGE,
+              sameAs: [SITE_URL],
+            }),
+          }}
+        />
       </head>
       <body>
         {children}

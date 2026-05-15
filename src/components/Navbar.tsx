@@ -42,7 +42,7 @@ export default function Navbar() {
             className="h-9 w-9 shrink-0 rounded-full object-contain sm:h-12 sm:w-12"
           />
           <span className="min-w-0 line-clamp-2 text-sm font-bold leading-tight tracking-wide text-gold sm:text-lg lg:text-xl">
-            Major S. D. Singh{" "}
+            Major S. D. Singh PG{" "}
             <span className="block text-[11px] font-semibold sm:inline sm:text-inherit">
               Ayurvedic Medical College
             </span>

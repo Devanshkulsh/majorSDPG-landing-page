@@ -68,7 +68,7 @@ async function normalizeCatastrophicSsrResponse(response: Response): Promise<Res
 
 function serveSeoAsset(pathname: string): Response | null {
   if (pathname === "/robots.txt") {
-    return new Response("User-agent: *\nAllow: /\n\nSitemap: https://majorsdspgamc.com/sitemap.xml\n", {
+    return new Response("User-agent: *\nAllow: /\n", {
       status: 200,
       headers: {
         "content-type": "text/plain; charset=utf-8",

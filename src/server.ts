@@ -66,8 +66,46 @@ async function normalizeCatastrophicSsrResponse(response: Response): Promise<Res
   return brandedErrorResponse();
 }
 
+function serveSeoAsset(pathname: string): Response | null {
+  if (pathname === "/robots.txt") {
+    return new Response("User-agent: *\nAllow: /\n\nSitemap: https://majorsdspgamc.com/sitemap.xml\n", {
+      status: 200,
+      headers: {
+        "content-type": "text/plain; charset=utf-8",
+        "cache-control": "public, max-age=3600",
+      },
+    });
+  }
+
+  if (pathname === "/sitemap.xml") {
+    return new Response(
+      `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://majorsdspgamc.com/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+</urlset>
+`,
+      {
+        status: 200,
+        headers: {
+          "content-type": "application/xml; charset=utf-8",
+          "cache-control": "public, max-age=3600",
+        },
+      },
+    );
+  }
+
+  return null;
+}
+
 export default {
   async fetch(request: Request, env: unknown, ctx: unknown) {
+    const seoAssetResponse = serveSeoAsset(new URL(request.url).pathname);
+    if (seoAssetResponse) return seoAssetResponse;
+
     try {
       const handler = await getServerEntry();
       const response = await handler.fetch(request, env, ctx);

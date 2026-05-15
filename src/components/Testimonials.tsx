@@ -93,6 +93,8 @@ export default function Testimonials() {
                           src={getYouTubeThumbnail(activeTestimonial.videoId)}
                           alt="Student testimonial thumbnail"
                           className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                          loading="lazy"
+                          decoding="async"
                         />
                         <div className="absolute inset-0 bg-charcoal/40 transition-colors duration-300 group-hover:bg-charcoal/55" />
                         <button
@@ -136,6 +138,8 @@ export default function Testimonials() {
                       src={getYouTubeThumbnail(testimonial.videoId)}
                       alt="Testimonial video thumbnail"
                       className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      loading="lazy"
+                      decoding="async"
                     />
                     <div
                       className={`absolute inset-0 flex items-center justify-center transition-colors ${

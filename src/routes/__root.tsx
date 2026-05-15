@@ -112,6 +112,26 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: SITE_URL,
       },
       {
+        rel: "preconnect",
+        href: "https://ntechzy.in",
+      },
+      {
+        rel: "dns-prefetch",
+        href: "https://ntechzy.in",
+      },
+      {
+        rel: "preconnect",
+        href: "https://www.youtube.com",
+      },
+      {
+        rel: "preconnect",
+        href: "https://img.youtube.com",
+      },
+      {
+        rel: "preconnect",
+        href: "https://www.google.com",
+      },
+      {
         rel: "icon",
         type: "image/webp",
         href: "/logo.webp",
@@ -159,18 +179,33 @@ function RootShell({ children }: { children: React.ReactNode }) {
       <body>
         {children}
         <script
-          type="module"
-          src="https://ntechzy.in/api/v1/student-form/form.js"
-          {...({
-            path: '["/", "/dynamicForm/index.html","/"]',
-            divid: "formsID7375",
-            courses:
-              '["Select Course", "MBBS", "BDS", "BAMS", "BHMS", "BUMS", "BNYS", "BSc. Nursing", "Veterinary"]',
-            styles: "classic",
-            logo: "/logo.webp",
-            contact: "8189098662",
-          } as Record<string, string>)}
-        ></script>
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function () {
+                var loadFormScript = function () {
+                  if (document.querySelector('script[data-form-script="true"]')) return;
+                  var script = document.createElement("script");
+                  script.type = "module";
+                  script.src = "https://ntechzy.in/api/v1/student-form/form.js";
+                  script.setAttribute("data-form-script", "true");
+                  script.setAttribute("path", '["/", "/dynamicForm/index.html","/"]');
+                  script.setAttribute("divid", "formsID7375");
+                  script.setAttribute("courses", '["Select Course", "MBBS", "BDS", "BAMS", "BHMS", "BUMS", "BNYS", "BSc. Nursing", "Veterinary"]');
+                  script.setAttribute("styles", "classic");
+                  script.setAttribute("logo", "/logo.webp");
+                  script.setAttribute("contact", "8189098662");
+                  document.body.appendChild(script);
+                };
+
+                if ("requestIdleCallback" in window) {
+                  window.requestIdleCallback(loadFormScript, { timeout: 1500 });
+                } else {
+                  window.setTimeout(loadFormScript, 1200);
+                }
+              })();
+            `,
+          }}
+        />
         <Scripts />
       </body>
     </html>

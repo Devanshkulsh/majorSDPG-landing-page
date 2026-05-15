@@ -1,17 +1,19 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { lazy, Suspense } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import TrustBar from "@/components/TrustBar";
-import About from "@/components/About";
-import Courses from "@/components/Courses";
-import Facilities from "@/components/Facilities";
-import AdmissionsProcess from "@/components/AdmissionsProcess";
-import LeadForm from "@/components/LeadForm";
-import Testimonials from "@/components/Testimonials";
-import FAQ from "@/components/FAQ";
-import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
-import ChatBot from "@/components/ChatBot";
+
+const TrustBar = lazy(() => import("@/components/TrustBar"));
+const About = lazy(() => import("@/components/About"));
+const Courses = lazy(() => import("@/components/Courses"));
+const Facilities = lazy(() => import("@/components/Facilities"));
+const AdmissionsProcess = lazy(() => import("@/components/AdmissionsProcess"));
+const LeadForm = lazy(() => import("@/components/LeadForm"));
+const Testimonials = lazy(() => import("@/components/Testimonials"));
+const FAQ = lazy(() => import("@/components/FAQ"));
+const Contact = lazy(() => import("@/components/Contact"));
+const Footer = lazy(() => import("@/components/Footer"));
+const ChatBot = lazy(() => import("@/components/ChatBot"));
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -57,17 +59,19 @@ function Index() {
     <main className="bg-cream">
       <Navbar />
       <Hero />
-      <TrustBar />
-      <About />
-      <Courses />
-      <Facilities />
-      <AdmissionsProcess />
-      <LeadForm />
-      <Testimonials />
-      <FAQ />
-      <Contact />
-      <Footer />
-      <ChatBot />
+      <Suspense fallback={null}>
+        <TrustBar />
+        <About />
+        <Courses />
+        <Facilities />
+        <AdmissionsProcess />
+        <LeadForm />
+        <Testimonials />
+        <FAQ />
+        <Contact />
+        <Footer />
+        <ChatBot />
+      </Suspense>
     </main>
   );
 }

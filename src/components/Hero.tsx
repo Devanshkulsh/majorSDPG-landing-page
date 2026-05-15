@@ -22,7 +22,14 @@ export default function Hero() {
   return (
     <section id="home" className="relative min-h-screen w-full overflow-x-hidden bg-charcoal-deep">
       <div className="absolute inset-0 z-0">
-        <img src="/hero.webp" alt="College Campus" className="h-full w-full object-cover" />
+        <img
+          src="/hero.webp"
+          alt="College Campus"
+          className="h-full w-full object-cover"
+          fetchPriority="high"
+          decoding="async"
+          loading="eager"
+        />
         <div className="absolute inset-0 bg-linear-to-b from-charcoal-deep/95 via-charcoal-deep/80 to-charcoal-deep/90 sm:bg-linear-to-r" />
       </div>
 

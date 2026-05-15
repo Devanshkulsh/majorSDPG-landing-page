@@ -40,6 +40,9 @@ export default function Navbar() {
             src="/logo.webp"
             alt="MSDS AMCH logo"
             className="h-9 w-9 shrink-0 rounded-full object-contain sm:h-12 sm:w-12"
+            loading="eager"
+            decoding="async"
+            fetchPriority="high"
           />
           <span className="min-w-0 line-clamp-2 text-sm font-bold leading-tight tracking-wide text-gold sm:text-lg lg:text-xl">
             Major S. D. Singh PG{" "}

@@ -68,6 +68,7 @@ export default function About() {
                     alt="Campus tour video thumbnail"
                     className="w-full h-full object-cover grayscale group-hover/thumb:grayscale-0 transition-all duration-300"
                     loading="lazy"
+                    decoding="async"
                   />
                   <div className="absolute inset-0 bg-black/25 group-hover/thumb:bg-black/35 transition-colors duration-200" />
                   <span className="absolute inset-0 flex items-center justify-center">

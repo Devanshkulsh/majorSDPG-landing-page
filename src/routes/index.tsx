@@ -19,7 +19,7 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "MSDSPG- Major SD Singh PG Ayurvedic Medical College | Admissions 2026-27" },
+      { title: "Major S.D. Singh PG Ayurvedic Medical College | Top BAMS College in UP" },
       {
         name: "description",
         content:
@@ -27,7 +27,7 @@ export const Route = createFileRoute("/")({
       },
       {
         property: "og:title",
-        content: "MSDSPG- Major SD Singh PG Ayurvedic Medical College | Admissions 2026-27",
+        content: "Major S.D. Singh PG Ayurvedic Medical College | Top BAMS College in UP",
       },
       {
         property: "og:description",
@@ -35,7 +35,10 @@ export const Route = createFileRoute("/")({
           "Apply for BAMS and MS (Prasuti Tantra, Shalya Tantra) at MSDSPG. NCISM approved, 20+ years legacy, 200-bed teaching hospital. Admissions open.",
       },
       { property: "og:url", content: "https://majorsdspgamc.com/" },
-      { name: "twitter:title", content: "MSDSPG- Major SD Singh PG Ayurvedic Medical College" },
+      {
+        name: "twitter:title",
+        content: "Major S.D. Singh PG Ayurvedic Medical College | Top BAMS College in UP",
+      },
     ],
     scripts: [
       {

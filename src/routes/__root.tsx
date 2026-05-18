@@ -11,8 +11,8 @@ import {
 import appCss from "../styles.css?url";
 
 const SITE_URL = "https://majorsdspgamc.com";
-const SITE_NAME = "Major S.D. Singh P.G. Ayurvedic Medical College & Hospital";
-const DEFAULT_TITLE = "MSDSPG | Major S.D. Singh P.G. Ayurvedic Medical College Admissions";
+const SITE_NAME = "Major S.D. Singh PG Ayurvedic Medical College | Top BAMS College in UP";
+const DEFAULT_TITLE = "Major S.D. Singh PG Ayurvedic Medical College | Top BAMS College in UP";
 const DEFAULT_DESCRIPTION =
   "Apply for BAMS and PG Ayurveda programs at Major S.D. Singh P.G. Ayurvedic Medical College & Hospital. NCISM approved college with strong clinical exposure and experienced faculty.";
 const OG_IMAGE = `${SITE_URL}/thumnail.webp`;

@@ -20,10 +20,13 @@ export default function Hero() {
   };
 
   return (
-    <section id="home" className="relative min-h-screen w-full overflow-x-hidden bg-charcoal-deep">
+    <section
+      id="home"
+      className="hero-professional-font relative min-h-screen w-full overflow-x-hidden bg-charcoal-deep"
+    >
       <div className="absolute inset-0 z-0">
         <img
-          src="/college.webp"
+          src="/college2.webp"
           alt="Major SD Singh PG Ayurvedic Medical College Campus"
           className="h-full w-full object-cover"
           fetchPriority="high"
@@ -55,7 +58,7 @@ export default function Hero() {
 
             <motion.h1
               variants={item}
-              className="mb-2 text-3xl font-extrabold leading-[1.15] text-cream sm:text-4xl lg:text-5xl xl:text-6xl"
+              className="mb-4 text-3xl font-extrabold leading-[1.15] text-cream sm:text-4xl lg:text-5xl xl:text-6xl"
             >
               <span className="text-gold">Major S. D. Singh PG </span>{" "}
               <br className="hidden sm:block" />

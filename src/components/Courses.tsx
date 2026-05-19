@@ -5,11 +5,11 @@ import SectionLabel from "./SectionLabel";
 const APPLICATION_FORM_DIV_ID = "formsID7375";
 const COURSE_IMAGES: Record<string, string> = {
   "Bachelor of Ayurvedic Medicine & Surgery (BAMS)":
-    "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=900&auto=format&fit=crop&q=70",
+    "/course/c1.webp",
   "Prasuti Tantra Avum Stri Rog (MS)":
-    "https://images.unsplash.com/photo-1551190822-a9333d879b1f?w=900&auto=format&fit=crop&q=70",
+    "/course/c2.webp",
   "Shalya Tantra (MS)":
-    "https://images.unsplash.com/photo-1512678080530-7760d81faba6?w=900&auto=format&fit=crop&q=70",
+    "/course/c3.webp",
 };
 
 const trimText = (text: string, maxLength = 110) =>

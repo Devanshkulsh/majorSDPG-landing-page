@@ -71,7 +71,7 @@ export const COURSES = [
     ],
     eligibility: "BAMS from recognized university",
     cta: "Enquire for MS (Prasuti)",
-    ctaClass: "bg-sky text-white hover:bg-sky-dark",
+    ctaClass: "bg-gold text-charcoal hover:bg-gold-dark",
   },
   {
     icon: "⚕️",
@@ -90,7 +90,7 @@ export const COURSES = [
     ],
     eligibility: "BAMS from recognized university",
     cta: "Enquire for MS (Shalya)",
-    ctaClass: "bg-green text-white hover:bg-green-light",
+    ctaClass: "bg-gold text-charcoal hover:bg-gold-dark",
   },
 ];
 
@@ -178,9 +178,9 @@ export const STEPS = [
     desc: "Our admissions team will contact you for guidance and document verification",
   },
   {
-    icon: "🎓",
-    title: "Confirm Admission",
-    desc: "Submit documents, pay fees, and secure your seat",
+    icon: "🎯",
+    title: "Admission Guidance",
+    desc: "After counselling, our team will assist you with seat confirmation, documentation, and further admission formalities",
   },
 ];
 

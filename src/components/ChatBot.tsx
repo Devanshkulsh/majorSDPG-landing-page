@@ -115,9 +115,9 @@ export default function ChatBot() {
           className="flex h-14 w-14 items-center justify-center overflow-hidden rounded-full bg-linear-to-br from-gold to-gold-dark text-white shadow-xl transition hover:scale-105"
         >
           <img
-            src="/logo.webp"
+            src="/robot.gif"
             alt="Admissions Assistant"
-            className="h-10 w-10 rounded-full object-cover ring-2 ring-white/50"
+            className="h-12 w-12 rounded-full object-cover ring-2 ring-white/50"
           />
         </button>
       </div>

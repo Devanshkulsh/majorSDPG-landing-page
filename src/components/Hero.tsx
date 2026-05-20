@@ -20,21 +20,24 @@ export default function Hero() {
   };
 
   return (
-    <section id="home" className="relative min-h-screen w-full overflow-x-hidden bg-charcoal-deep">
+    <section
+      id="home"
+      className="hero-professional-font relative min-h-screen w-full overflow-x-hidden bg-charcoal-deep"
+    >
       <div className="absolute inset-0 z-0">
         <img
-          src="/hero.webp"
-          alt="College Campus"
+          src="/college2.webp"
+          alt="Major SD Singh PG Ayurvedic Medical College Campus"
           className="h-full w-full object-cover"
           fetchPriority="high"
           decoding="async"
           loading="eager"
         />
-        <div className="absolute inset-0 bg-linear-to-b from-charcoal-deep/95 via-charcoal-deep/80 to-charcoal-deep/90 sm:bg-linear-to-r" />
+        <div className="absolute inset-0 bg-linear-to-b from-black/70 via-black/70 to-black/80 sm:bg-linear-to-r" />
       </div>
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-20 xl:py-24">
-        <div className="flex flex-col items-center gap-12 lg:flex-row lg:items-center lg:gap-12 xl:gap-20">
+        <div className="flex flex-col items-center gap-12 lg:flex-row lg:items-center lg:gap-12 xl:gap-18">
           {/* Text Content */}
           <motion.div
             className="flex w-full flex-1 flex-col items-center text-center lg:items-start lg:text-left"

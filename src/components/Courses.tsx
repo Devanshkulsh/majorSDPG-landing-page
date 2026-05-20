@@ -3,6 +3,17 @@ import { COURSES } from "@/constants/data";
 import SectionLabel from "./SectionLabel";
 
 const APPLICATION_FORM_DIV_ID = "formsID7375";
+const COURSE_IMAGES: Record<string, string> = {
+  "Bachelor of Ayurvedic Medicine & Surgery (BAMS)":
+    "/course/c1.webp",
+  "Prasuti Tantra Avum Stri Rog (MS)":
+    "/course/c2.webp",
+  "Shalya Tantra (MS)":
+    "/course/c3.webp",
+};
+
+const trimText = (text: string, maxLength = 110) =>
+  text.length > maxLength ? `${text.slice(0, maxLength).trimEnd()}...` : text;
 
 export default function Courses() {
   const scrollToLeadForm = () => {
@@ -46,33 +57,34 @@ export default function Courses() {
               viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 0.6, delay: i * 0.15 }}
               whileHover={{ y: -8 }}
-              className="relative bg-[#111827] rounded-2xl p-8 border border-gold/20 hover:border-gold/50 transition-all hover:shadow-[0_20px_60px_rgba(245,184,0,0.15)] flex flex-col"
+              className="relative bg-white rounded-2xl p-6 border border-gold/20 hover:border-gold/50 transition-all hover:shadow-[0_20px_60px_rgba(245,184,0,0.15)] flex flex-col"
               style={{ borderTop: "4px solid #F5B800" }}
             >
-              <div
-                className={`w-16 h-16 rounded-full ${c.iconBg} flex items-center justify-center text-3xl mb-5`}
-              >
-                {c.icon}
-              </div>
+              <img
+                src={COURSE_IMAGES[c.title]}
+                alt={c.title}
+                className="w-full h-46 object-cover rounded-xl mb-5 border border-gold/20"
+                loading="lazy"
+              />
               <span className="inline-block self-start text-[10px] font-bold tracking-widest text-sky bg-sky/10 px-3 py-1 rounded-full mb-3">
                 {c.badge}
               </span>
-              <h3 className="text-xl font-bold text-cream leading-snug mb-2">{c.title}</h3>
-              <p className="text-gold text-sm font-medium mb-4">⏱ {c.duration}</p>
-              <p className="text-cream/70 text-sm leading-relaxed mb-5">{c.description}</p>
-              <ul className="space-y-2 mb-5">
-                {c.highlights.map((h) => (
-                  <li key={h} className="flex items-start gap-2 text-cream/80 text-sm">
+              <h3 className="text-xl font-bold text-gray-900 leading-snug mb-2">{c.title}</h3>
+              <p className="text-amber-600 text-sm font-medium mb-4">⏱ {c.duration}</p>
+              <p className="text-gray-600 text-sm leading-relaxed mb-4">{trimText(c.description)}</p>
+              <ul className="space-y-2 mb-4">
+                {c.highlights.slice(0, 3).map((h) => (
+                  <li key={h} className="flex items-start gap-2 text-gray-700 text-sm">
                     <span className="text-gold mt-1.5 w-1.5 h-1.5 rounded-full bg-gold shrink-0" />
                     {h}
                   </li>
                 ))}
               </ul>
               <div className="border-t border-gold/15 pt-4 mb-5">
-                <div className="text-[11px] uppercase tracking-wider text-cream/50 mb-1">
+                <div className="text-[11px] uppercase tracking-wider text-gray-400 mb-1">
                   Eligibility
                 </div>
-                <div className="text-cream/90 text-sm">{c.eligibility}</div>
+                <div className="text-gray-800 text-sm">{c.eligibility}</div>
               </div>
               <button
                 onClick={scrollToLeadForm}
